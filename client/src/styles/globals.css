@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@layer components {
+  .grid-cell {
+    @apply border border-gray-200 transition-colors duration-100;
+  }
+  
+  .grid-cell-start {
+    @apply bg-green-500;
+  }
+  
+  .grid-cell-end {
+    @apply bg-red-500;
+  }
+  
+  .grid-cell-wall {
+    @apply bg-gray-800;
+  }
+  
+  .grid-cell-path {
+    @apply bg-yellow-400;
+  }
+  
+  .grid-cell-visited {
+    @apply bg-blue-200;
+  }
+  
+  .grid-cell-visiting {
+    @apply bg-blue-400;
+  }
+  
+  .button-primary {
+    @apply px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors;
+  }
+  
+  .button-secondary {
+    @apply px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition-colors;
+  }
+}

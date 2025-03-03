@@ -1,0 +1,29 @@
+{
+  "name": "advanced-pathfinding",
+  "version": "1.0.0",
+  "description": "Advanced pathfinding visualization with complex algorithms",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"cd client && npm run dev\" \"cd server && npm run dev\"",
+    "build": "npm run build:shared && npm run build:server && npm run build:client",
+    "build:client": "cd client && npm run build",
+    "build:server": "cd server && npm run build",
+    "build:shared": "cd shared && npm run build",
+    "start": "concurrently \"cd client && npm run start\" \"cd server && npm run start\"",
+    "start:client": "cd client && npm run start",
+    "start:server": "cd server && npm run start"
+  },
+  "keywords": [
+    "pathfinding",
+    "algorithms",
+    "visualization",
+    "a-star",
+    "jump-point-search",
+    "flow-field"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
