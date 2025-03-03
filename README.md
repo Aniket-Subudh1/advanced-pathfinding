@@ -35,7 +35,7 @@ The project is organized as a monorepo with three main components:
 
 ### Prerequisites
 
-- Node.js 16+ and npm
+- Node.js and npm
 - Docker and Docker Compose (optional)
 
 ### Installation
