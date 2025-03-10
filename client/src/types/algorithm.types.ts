@@ -1,3 +1,4 @@
+import { Position } from './grid.types';
 export type AlgorithmType = 
   | 'astar'
   | 'jps'

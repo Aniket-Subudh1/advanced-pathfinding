@@ -1,3 +1,5 @@
+// shared/src/types/index.ts - Updated with PathNode interface
+
 export type AlgorithmType = 
   | 'astar'
   | 'jps'
@@ -25,6 +27,16 @@ export interface AlgorithmOptions {
 export interface Position {
   x: number;
   y: number;
+}
+
+
+export interface PathNode {
+  x: number;
+  y: number;
+  g: number;       
+  h: number;       
+  f: number;       
+  parent?: PathNode; 
 }
 
 export type CellType = 

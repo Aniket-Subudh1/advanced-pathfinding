@@ -9,9 +9,7 @@ const defaultAlgorithmOptions = {
   tieBreaker: true
 };
 
-/**
- * Get default algorithm options
- */
+
 export const getDefaultOptions = (
   _req: Request,
   res: Response,

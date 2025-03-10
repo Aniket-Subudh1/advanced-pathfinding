@@ -3,7 +3,6 @@ import { algorithmService } from '../services';
 import { logger } from '../utils';
 import { AlgorithmType } from '../types';
 
-// Mock algorithm information since we don't have the config module yet
 const algorithms = {
   'astar': {
     id: 'astar',
@@ -11,7 +10,7 @@ const algorithms = {
     description: 'A widely used pathfinding algorithm that uses heuristics.',
     complexityTime: 'O(E log V)',
     complexitySpace: 'O(V)',
-    color: '#8b5cf6'  // Purple
+    color: '#8b5cf6'  
   },
   'jps': {
     id: 'jps',
@@ -19,7 +18,7 @@ const algorithms = {
     description: 'An optimization of A* for uniform-cost grids.',
     complexityTime: 'O(E log V)',
     complexitySpace: 'O(V)',
-    color: '#ec4899'  // Pink
+    color: '#ec4899'  
   },
   'bts': {
     id: 'bts',
@@ -27,7 +26,7 @@ const algorithms = {
     description: 'A bidirectional version of Theta*.',
     complexityTime: 'O(E log V)',
     complexitySpace: 'O(V)',
-    color: '#f59e0b'  // Amber
+    color: '#f59e0b'  
   },
   'flowfield': {
     id: 'flowfield',
@@ -35,7 +34,7 @@ const algorithms = {
     description: 'Creates a vector field for multiple agents.',
     complexityTime: 'O(V)',
     complexitySpace: 'O(V)',
-    color: '#10b981'  // Emerald
+    color: '#10b981'  
   },
   'hpa': {
     id: 'hpa',
@@ -43,13 +42,11 @@ const algorithms = {
     description: 'A multi-level pathfinding approach.',
     complexityTime: 'O(E log V)',
     complexitySpace: 'O(V + A)',
-    color: '#3b82f6'  // Blue
+    color: '#3b82f6'  
   }
 };
 
-/**
- * Execute an algorithm with the provided grid and options
- */
+
 export const executeAlgorithm = async (
   req: Request,
   res: Response,
@@ -74,9 +71,7 @@ export const executeAlgorithm = async (
   }
 };
 
-/**
- * List all available algorithms
- */
+
 export const listAlgorithms = (
   _req: Request,
   res: Response,
@@ -90,9 +85,7 @@ export const listAlgorithms = (
   }
 };
 
-/**
- * Get details for a specific algorithm
- */
+
 export const getAlgorithmDetails = (
   req: Request,
   res: Response,

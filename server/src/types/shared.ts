@@ -1,5 +1,3 @@
-// Shared types for the algorithms
-
 export type AlgorithmType = 
   | 'astar'
   | 'jps'

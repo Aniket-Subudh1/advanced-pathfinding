@@ -67,7 +67,9 @@ export default function Home() {
   useEffect(() => {
     const fetchMetrics = async () => {
       try {
+        console.log('Fetching initial metrics...');
         const metrics = await getAlgorithmMetrics();
+        console.log('Initial metrics received:', metrics);
         setAlgorithmMetrics(metrics);
       } catch (error) {
         console.error('Error fetching algorithm metrics:', error);
@@ -84,6 +86,16 @@ export default function Home() {
       const algorithmResult = await runAlgorithm(grid);
       if (algorithmResult) {
         prepareVisualization(algorithmResult.visited, algorithmResult.path);
+        
+        // Fetch updated metrics after running the algorithm
+        try {
+          console.log('Fetching updated metrics after algorithm execution...');
+          const updatedMetrics = await getAlgorithmMetrics();
+          console.log('Updated metrics received:', updatedMetrics);
+          setAlgorithmMetrics(updatedMetrics);
+        } catch (error) {
+          console.error('Error fetching updated metrics:', error);
+        }
       }
     } catch (error) {
       console.error('Error running algorithm:', error);

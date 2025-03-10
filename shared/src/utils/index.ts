@@ -1,6 +1,3 @@
-/**
- * Manhattan distance heuristic
- */
 export const manhattanDistance = (
   x1: number, 
   y1: number, 
@@ -10,9 +7,7 @@ export const manhattanDistance = (
   return Math.abs(x1 - x2) + Math.abs(y1 - y2);
 };
 
-/**
- * Euclidean distance heuristic
- */
+
 export const euclideanDistance = (
   x1: number, 
   y1: number, 
@@ -22,9 +17,6 @@ export const euclideanDistance = (
   return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
 };
 
-/**
- * Diagonal distance heuristic
- */
 export const diagonalDistance = (
   x1: number, 
   y1: number, 
@@ -36,9 +28,7 @@ export const diagonalDistance = (
   return Math.max(dx, dy) + (Math.sqrt(2) - 1) * Math.min(dx, dy);
 };
 
-/**
- * Create an empty grid
- */
+
 export const createEmptyGrid = (width: number, height: number) => {
   const cells: GridCell[] = [];
 
@@ -54,11 +44,9 @@ export const createEmptyGrid = (width: number, height: number) => {
     }
   }
 
-  // Default start and end positions
   const startPosition: Position = { x: Math.floor(width / 4), y: Math.floor(height / 2) };
   const endPosition: Position = { x: Math.floor(width * 3 / 4), y: Math.floor(height / 2) };
 
-  // Set start and end cells
   const startIndex = startPosition.y * width + startPosition.x;
   const endIndex = endPosition.y * width + endPosition.x;
   
@@ -74,5 +62,4 @@ export const createEmptyGrid = (width: number, height: number) => {
   };
 };
 
-// Import types to make them available
 import { GridCell, Position } from '../types';

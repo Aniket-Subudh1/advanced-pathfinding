@@ -22,7 +22,6 @@ const AnimationControls: React.FC<AnimationControlsProps> = ({
   speed,
   onSpeedChange
 }) => {
-  // Convert speed to display value (reverse the scale so higher = faster)
   const displaySpeed = 110 - speed;
   
   return (

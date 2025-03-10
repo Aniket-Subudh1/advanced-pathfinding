@@ -1,10 +1,11 @@
-import { astar } from './runners/astar';
-import { AlgorithmType, AlgorithmOptions, GridData, Position, AlgorithmResult } from 'shared/src/types';
-import { NotFoundError } from '../utils';
+import { AlgorithmType, GridData, Position, AlgorithmOptions, AlgorithmResult } from '../../../shared/src/types';
+import { runAstar } from './runners/astar';
+import { runJPS } from './runners/jps';
+import { runBidirectionalTheta } from './runners/bidirectional-theta';
+import { runFlowField } from './runners/flowfield';
+import { runHPA } from './runners/hpa';
 
-/**
- * Run the specified algorithm
- */
+
 export async function runAlgorithm(
   algorithmId: AlgorithmType,
   grid: GridData,
@@ -14,20 +15,16 @@ export async function runAlgorithm(
 ): Promise<AlgorithmResult> {
   switch (algorithmId) {
     case 'astar':
-      return await astar(grid, start, end, options);
+      return await runAstar(grid, start, end, options);
     case 'jps':
-      // Would implement JPS algorithm
-      throw new NotFoundError('Jump Point Search algorithm not yet implemented');
+      return await runJPS(grid, start, end, options);
     case 'bts':
-      // Would implement Bidirectional Theta* algorithm
-      throw new NotFoundError('Bidirectional Theta* algorithm not yet implemented');
+      return await runBidirectionalTheta(grid, start, end, options);
     case 'flowfield':
-      // Would implement Flow Field algorithm
-      throw new NotFoundError('Flow Field algorithm not yet implemented');
+      return await runFlowField(grid, start, end, options);
     case 'hpa':
-      // Would implement Hierarchical Pathfinding A* algorithm
-      throw new NotFoundError('Hierarchical Pathfinding A* algorithm not yet implemented');
+      return await runHPA(grid, start, end, options);
     default:
-      throw new NotFoundError(`Algorithm ${algorithmId} not found`);
+      throw new Error(`Algorithm ${algorithmId} not found`);
   }
 }

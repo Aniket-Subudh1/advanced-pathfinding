@@ -33,7 +33,7 @@ const PathRenderer: React.FC<PathRendererProps> = ({
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
     // Draw visited cells
-    ctx.fillStyle = 'rgba(147, 197, 253, 0.5)'; // Light blue
+    ctx.fillStyle = 'rgba(147, 197, 253, 0.5)'; 
     for (const pos of visited) {
       ctx.fillRect(
         pos.x * cellSize,
@@ -85,8 +85,7 @@ const PathRenderer: React.FC<PathRendererProps> = ({
       }
     }
     
-    // Draw start and end points
-    // Start point (green)
+   
     ctx.fillStyle = 'rgba(16, 185, 129, 0.8)'; // Green
     ctx.beginPath();
     ctx.arc(

@@ -1,26 +1,25 @@
 export const algorithmColors = {
-    astar: '#8b5cf6', // Purple
-    jps: '#ec4899',   // Pink
-    bts: '#f59e0b',   // Amber
-    flowfield: '#10b981', // Emerald
-    hpa: '#3b82f6'    // Blue
+    astar: '#8b5cf6', 
+    jps: '#ec4899',   
+    bts: '#f59e0b',   
+    flowfield: '#10b981', 
+    hpa: '#3b82f6'   
   };
   
   export const getCellColor = (cellType: string): string => {
     switch (cellType) {
       case 'start':
-        return '#10b981'; // Green
+        return '#10b981'; 
       case 'end':
-        return '#ef4444'; // Red
-      case 'wall':
-        return '#1f2937'; // Dark Gray
+        return '#ef4444'; 
+        return '#1f2937'; 
       case 'path':
-        return '#fbbf24'; // Yellow
+        return '#fbbf24'; 
       case 'visited':
-        return '#93c5fd'; // Light Blue
+        return '#93c5fd'; 
       case 'visiting':
-        return '#3b82f6'; // Blue
+        return '#3b82f6'; 
       default:
-        return '#ffffff'; // White
+        return '#ffffff'; 
     }
   };

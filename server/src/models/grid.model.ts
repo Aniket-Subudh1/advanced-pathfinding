@@ -17,7 +17,7 @@ export function analyzeGrid(grid: GridData): GridAnalysisResult {
   const walkableCells = cells.filter(cell => cell.walkable).length;
   const wallCells = totalCells - walkableCells;
   
-  // A very basic check - we'd need to run a pathfinding algorithm to be sure
+  
   const pathExists = walkableCells > 0;
   
   return {
